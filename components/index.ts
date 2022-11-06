@@ -1,2 +1,2 @@
-export * from "./layout";
-export * from "./MapChart";
+export * from "./Layout";
+
