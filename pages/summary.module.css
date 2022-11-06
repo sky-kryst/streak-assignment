@@ -1,0 +1,86 @@
+.Dashboard {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background-color: #5d6576;
+  min-height: 700px;
+}
+
+.Latest {
+  height: 33.33%;
+  width: 100%;
+  background-color: #071228;
+  border: 6px solid #5d6576;
+}
+
+.Group {
+  width: 100%;
+  height: 66.66%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Average,
+.CountryDist,
+.GoalsByCountry,
+.TopFiveCountries {
+  height: 50%;
+  width: 50%;
+  background-color: #071228;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #5d6576;
+}
+
+.CountryDist > canvas,
+.TopFiveCountries > canvas,
+.Average > canvas,
+.GoalsByCountry > canvas,
+.Latest > canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.UpArrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid cyan;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+  grid-col-start: 3;
+}
+
+.DownArrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid red;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+  grid-col-start: 3;
+}
+
+@media (max-width: 768px) {
+    .Group {
+      height: fit-content;
+      display: flex;
+      flex-wrap: none;
+    }
+  
+    .Latest
+    .Average,
+    .CountryDist,
+    .GoalsByCountry,
+    .TopFiveCountries {
+      height: 300px;
+      width: 100%;
+    }
+  }
